@@ -1,5 +1,5 @@
 // import { GlobalStyle } from "./GlobalStyle";
-import { Layout} from "./Layout";
+// import { Layout} from "./Layout";
 // import { ErrMsg, Layout, Title } from "./Layout";
 // import { ContactForm } from './ContactForm/ContactForm';
 // import { ContactList } from './ContactList/ContactList';
@@ -14,10 +14,14 @@ import { Home } from "pages/Home";
 import { refresh } from "redux/auth/operations";
 import { selectIsRefreshing } from "redux/auth/authSlice";
 import { Route, Routes } from "react-router-dom";
-import { Contacts } from "pages/Contacts";
+// import { Contacts } from "pages/Contacts";
 import { Register } from "pages/Register";
 import { Login } from "pages/Login";
-// import { PrivateRoute, RestrictedRoute } from "./AuthRoutes/AuthRoutes";
+import { SharedLayout } from "./SharedLayout";
+import { PrivateRoute, RestrictedRoute } from "./AuthRoutes/AuthRoutes";
+import { ContactForm } from "./ContactForm/ContactForm";
+import { ContactList } from "./ContactList/ContactList";
+import { GlobalStyle } from "./GlobalStyle";
 
 
 export const App = () => {
@@ -37,18 +41,21 @@ export const App = () => {
 
   return isRefreshing ? (
     <b>Refreshing user...</b>
-  ) : (
+  ) : (<>
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home />} />
-        <Route path="/register" element={<Register />} />
+        {/* <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/contacts" element={<Contacts />} />
-        {/* <Route path="/register" element={<RestrictedRoute redirectTo="/contacts" component={<Register />} />}/>
+        <Route path="/contacts" element={<Contacts />} /> */}
+        <Route path="/register" element={<RestrictedRoute redirectTo="/contacts" component={<Register />} />}/>
         <Route path="/login" element={<RestrictedRoute redirectTo="/contacts" component={<Login />} />}/>
-        <Route path="/contacts" element={<PrivateRoute redirectTo="/login" component={<Contacts />} />}/> */}
+        <Route path="/contacts" element={<PrivateRoute redirectTo="/login" component={<ContactList />} />}/>
+        <Route path="/newcontact" element={<PrivateRoute redirectTo="/login" component={<ContactForm />} />}/>
       </Route>
     </Routes>
+      <GlobalStyle />
+  </>
   );
 }
 

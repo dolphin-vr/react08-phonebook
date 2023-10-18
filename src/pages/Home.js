@@ -1,19 +1,20 @@
-import { selectIsLoggedIn } from 'redux/auth/authSlice';
-import { ContactForm } from 'components/ContactForm/ContactForm';
-import { ContactList } from 'components/ContactList/ContactList';
-import { Filter } from 'components/Filter/Filter';
-import { GlobalStyle } from 'components/GlobalStyle';
-import { ErrMsg, Layout, Title } from 'components/Layout';
-import { Loader } from 'components/Loader/Loader';
-import { RegisterForm } from 'components/RegisterForm/RegisterForm';
-import { selectError, selectIsLoading } from 'redux/selectors';
-import { MdOutlineContactPhone } from 'react-icons/md';
-import { useSelector } from 'react-redux';
+// import { selectIsLoggedIn } from 'redux/auth/authSlice';
+// import { ContactForm } from 'components/ContactForm/ContactForm';
+// import { ContactList } from 'components/ContactList/ContactList';
+// import { Filter } from 'components/Filter/Filter';
+// import { GlobalStyle } from 'components/GlobalStyle';
+import {  Layout } from 'components/Layout';
+// import { ErrMsg, Layout, Title } from 'components/Layout';
+// import { Loader } from 'components/Loader/Loader';
+// import { RegisterForm } from 'components/RegisterForm/RegisterForm';
+// import { selectError, selectIsLoading } from 'redux/selectors';
+// import { MdOutlineContactPhone } from 'react-icons/md';
+// import { useSelector } from 'react-redux';
 
 export const Home = () => {
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
-  const isLogged = useSelector(selectIsLoggedIn);
+  // const isLoading = useSelector(selectIsLoading);
+  // const error = useSelector(selectError);
+  // const isLogged = useSelector(selectIsLoggedIn);
 
   // useEffect(() => {
   //   dispatch(fetchContacts());
@@ -21,7 +22,8 @@ export const Home = () => {
 
   return (
     <Layout>
-      <RegisterForm />
+      Home page - Welcome
+      {/* <RegisterForm />
       <Title>
         <MdOutlineContactPhone size={48} /> Phonebook
       </Title>
@@ -30,8 +32,7 @@ export const Home = () => {
       <Filter />
       {isLoading && <Loader />}
       <ContactList />
-      {error && <ErrMsg>Sorry, something went wrong. Try reload page</ErrMsg>}
-      <GlobalStyle />
+      {error && <ErrMsg>Sorry, something went wrong. Try reload page</ErrMsg>} */}
     </Layout>
   );
 };

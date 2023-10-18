@@ -10,12 +10,14 @@ import {
 import { MdOutlineDeleteForever } from 'react-icons/md';
 import { selectFilteredContacts } from 'redux/selectors';
 import { deleteContact } from 'redux/operations';
+import { Filter } from 'components/Filter/Filter';
 
 export const ContactList = () => {
   const contacts = useSelector(selectFilteredContacts);
   const dispatch = useDispatch();
   return (
     <Wrapper>
+      <Filter />
       <List>
         {contacts.map(el => (
           <ListItem key={el.id}>
