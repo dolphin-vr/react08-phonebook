@@ -1,7 +1,8 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import { styled } from "styled-components";
-import { Header, MainNav, StyledLink } from "./SharedLayout.styled";
+import { Header } from "./SharedLayout.styled";
+// import { Header, MainNav, StyledLink } from "./SharedLayout.styled";
 import { Toaster } from 'react-hot-toast';
 import { Navigation } from "./Navigation/Navigation";
 
