@@ -5,7 +5,7 @@ import { BtnSubmit, Form, Input, Label } from './RegisterForm.styled';
 export const LoginForm = () => {
   const dispatch = useDispatch();
   const handleSubmit = ev => {
-    preventDefault();
+    ev.preventDefault();
     const form = ev.currentTarget;
     dispatch(
       register({
