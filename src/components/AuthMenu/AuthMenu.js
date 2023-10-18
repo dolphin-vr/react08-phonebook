@@ -1,14 +1,11 @@
-import { NavLink } from 'react-router-dom';
+import { NavItem, NavMenu, StyledLink } from 'components/AppHeader/AppHeader.styled';
 
-export const AuthNav = () => {
+export const AuthMenu = () => {
   return (
-    <div>
-      <NavLink to="/register">
-        Register
-      </NavLink>
-      <NavLink to="/login">
-        Log In
-      </NavLink>
-    </div>
+   <NavMenu>
+      {/* <li><StyledLink to="/register">Register</StyledLink></li> */}
+      <NavItem><StyledLink to="/register">Register</StyledLink></NavItem>
+      <NavItem><StyledLink to="/login">Log In</StyledLink></NavItem>
+   </NavMenu>
   );
 };
