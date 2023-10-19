@@ -37,8 +37,19 @@ export const Name = styled.span`
 export const Phone = styled.span`
 `
 
-export const BtnDelete = styled.button`
+export const BtnEdit = styled.button`
    margin-left: auto;
+   /* width: 24px;
+   height: 24px; */
+   font-size: 12px;
+   padding: 0;
+   border: none;
+   border-radius: ${({ theme }) => theme.radii.sm};
+   color: ${({ theme }) => theme.colors.blue};
+`
+
+export const BtnDelete = styled.button`
+   margin-left: 8px;
    font-size: 12px;
    padding: 0;
    border: none;
