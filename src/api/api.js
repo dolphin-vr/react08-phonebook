@@ -16,6 +16,6 @@ export const serviceLogOut = () => axios.post("/users/logout");
 export const serviceRefresh = () => axios.get("/users/current");
 
 export const serviceGetContacts = ()=>axios.get("/contacts");
-export const serviceAddContact = contact=>axios.post("/contacts", contact);
+export const serviceAddContact = contact=>axios.post("/contacts", {name: contact.name, number: contact.phone});
 export const serviceDeleteContact = id=>axios.delete(`/contacts/${id}`);
-export const serviceChangeContact = contact=>axios.put(`/contacts/${contact.id}`, {contact});
+export const serviceChangeContact = contact=>axios.put(`/contacts/${contact.id}`, {name: contact.name, number: contact.phone});
