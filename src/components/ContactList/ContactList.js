@@ -1,13 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  BtnDelete,
-  BtnEdit,
-  List,
-  ListItem,
-  Name,
-  Phone,
-  Wrapper,
-} from './ContactList.styled';
+import { BtnDelete, BtnEdit, List, ListItem, Name, Phone, Wrapper } from './ContactList.styled';
 import { MdEdit, MdOutlineDeleteForever } from 'react-icons/md';
 import { selectFilteredContacts } from 'redux/selectors';
 import { deleteContact, fetchContacts } from 'redux/operations';
@@ -20,7 +12,7 @@ export const ContactList = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
   const contacts = useSelector(selectFilteredContacts);
-  console.log('cont= ', contacts);
+  
   return (
     <Wrapper>
       <Filter />

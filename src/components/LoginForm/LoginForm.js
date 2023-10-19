@@ -1,6 +1,7 @@
 import { login } from 'redux/auth/operations';
 import { useDispatch } from 'react-redux';
-import { BtnSubmit, Form, Input, Label } from './RegisterForm.styled';
+import { BtnAuth } from 'components/AppHeader/AppHeader.styled';
+import { Form, Input, Label } from 'components/RegisterForm/RegisterForm.styled';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ export const LoginForm = () => {
         Password
         <Input name="password" type="password" />
       </Label>
-      <BtnSubmit>Login</BtnSubmit>
+      <BtnAuth>Login</BtnAuth>
     </Form>
   );
 };
