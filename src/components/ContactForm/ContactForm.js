@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import toast from 'react-hot-toast';
 import { selectContacts } from 'redux/selectors';
 import { addContact } from 'redux/operations';
+import { BtnAuth } from 'components/AppHeader/AppHeader.styled';
 
 const phonePattern =
   '\\+?\\d{1,4}?[ .\\-\\s]?\\(?\\d{1,3}?\\)?[ .\\-\\s]?\\d{1,4}[ .\\-\\s]?\\d{1,4}[ .\\-\\s]?\\d{1,9}';
@@ -70,7 +71,7 @@ export const ContactForm = () => {
           <ErrorMsg name="phone" component="span" />
         </Label>
 
-        <button type="submit">Add Contact</button>
+        <BtnAuth type="submit">Add Contact</BtnAuth>
       </StyledForm>
     </Formik>
   );

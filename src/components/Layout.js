@@ -1,17 +1,28 @@
 import styled from 'styled-components';
 
 export const Layout = styled.div`
-  max-width: 480px;
-  margin: 0 auto;
-  padding: ${({ theme }) => theme.spacing(4)};
+width: 100%;
+height: calc(100vh - 80px);
+display: flex;
+gap: 40px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 `;
 
 export const Title = styled.h1`
-   margin: ${({theme}) => theme.spacing(4)} auto ${({theme}) => theme.spacing(3)};
+  width: 50%;
+   margin: 0 auto ${({theme}) => theme.spacing(3)};
    display: flex;
-   gap: ${({theme}) => theme.spacing(4)};
+   justify-content: center;
+   gap: ${({theme}) => theme.spacing(10)};
    align-items: center;
    font-size: 32px;
+  text-align: center;
+`
+export const Text = styled.p`
+  font-size: 20px;
+  text-align: center;
 `
 
 export const ErrMsg = styled.div`

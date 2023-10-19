@@ -1,6 +1,6 @@
 ###  Phone Book
 
-Simple Phone Book application that can store phone contacts in LocalStorage and search in contacts list by filter.
+Simple Phone Book application that can store phone contacts on server and search in contacts list by filter.
+Use of this application requires registration.
 
-This project is a refactoring version of [react04-phonebook](https://github.com/dolphin-vr/react04-phonebook) to using Vanilla Redux for state management.
-Also Redux Persist uses to work with LocalStorage.
+This project uses Redux Toolkit for state management, React Router for page routing and Redux Persist uses to work with LocalStorage.

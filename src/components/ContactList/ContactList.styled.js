@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
    display: flex;
    flex-direction: column;
    align-items: center;
+   padding: ${props => props.theme.spacing(3)};
 `
 
 export const Title = styled.h2`
@@ -18,7 +19,7 @@ export const List = styled.ul`
    justify-content: center;
    align-items: center;
    padding: 0;
-   width: 100%;
+   width: 560px;
 `
 
 export const ListItem = styled.li`
@@ -39,13 +40,12 @@ export const Phone = styled.span`
 
 export const BtnEdit = styled.button`
    margin-left: auto;
-   /* width: 24px;
-   height: 24px; */
    font-size: 12px;
    padding: 0;
    border: none;
    border-radius: ${({ theme }) => theme.radii.sm};
-   color: ${({ theme }) => theme.colors.blue};
+   color: ${({ theme }) => theme.colors.darkgray};
+   /* cursor: pointer; */
 `
 
 export const BtnDelete = styled.button`
@@ -55,4 +55,8 @@ export const BtnDelete = styled.button`
    border: none;
    border-radius: ${({ theme }) => theme.radii.sm};
    color: ${({ theme }) => theme.colors.red};
+   cursor: pointer;
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.darkgray};
+  }
 `
